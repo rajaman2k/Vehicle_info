@@ -223,7 +223,7 @@ except (KeyError, FileNotFoundError):
 @st.cache_resource
 def get_model():
     return ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-pro",
         api_key=API_KEY,
         temperature=0.6,
     )
