@@ -12,6 +12,16 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
+# Code to check avl models
+import google.generativeai as genai
+
+genai.configure(api_key="GOOGLE_API_KEY")
+
+for m in genai.list_models():
+    print(m.name, m.supported_generation_methods)
+
+
+
 # ── 2. Page config ────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="VehicleIQ – AI Vehicle Advisor",
